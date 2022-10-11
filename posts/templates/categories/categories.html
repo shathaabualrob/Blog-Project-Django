@@ -1,0 +1,21 @@
+{% extends '../master.html' %}
+
+{% block contents %}
+    <table>
+        <theader>
+            <th>
+                <tr>
+                    <th>Category Name</th>
+                    <th>Category Decscription</th>
+                </tr>
+            </th>
+            {% for category in categories%}
+                <tr>
+                    <td>{{category.catName}}</td>
+                    <td>{{category.catDesc}}</td>
+                </tr>
+            {% endfor %}
+        </theader>
+    </table>
+
+{% endblock contents %}
