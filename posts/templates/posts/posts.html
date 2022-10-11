@@ -11,7 +11,7 @@
             </th>
             {% for post in posts%}
                 <tr>
-                    <td>{{post.title}}</td>
+                    <td><a href= {% url 'post' post.id %}>{{post.title}}</a></td>
                     <td>{{post.content}}</td>
                 </tr>
             {% endfor %}

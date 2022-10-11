@@ -7,12 +7,18 @@
                 <tr>
                     <th>Category Name</th>
                     <th>Category Decscription</th>
+                    <th>Category Posts</th>
                 </tr>
             </th>
             {% for category in categories%}
                 <tr>
                     <td>{{category.catName}}</td>
                     <td>{{category.catDesc}}</td>
+                    <td>
+                        {% for post in category.post_set.all%}
+                            <li>{{post.title}}</li>
+                        {% endfor %}
+                    </td>
                 </tr>
             {% endfor %}
         </theader>
